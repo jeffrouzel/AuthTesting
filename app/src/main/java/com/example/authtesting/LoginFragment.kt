@@ -32,6 +32,8 @@ class LoginFragment : Fragment() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
         )[UserViewModel::class.java]
 
+        viewModel.insertDefaultUser()
+
         binding.buttonLogin.setOnClickListener {
             val username = binding.inputUsername.text.toString()
             val password = binding.inputPassword.text.toString()
