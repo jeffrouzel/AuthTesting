@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MVVMTesting</string>
+    <string name="app_name">AuthTesting</string>
     <string name="pllogin">Login Page</string>
     <string name="plregister">Register Page</string>
     <string name="plhome">WELCOME!</string>
