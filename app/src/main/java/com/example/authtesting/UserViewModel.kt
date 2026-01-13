@@ -17,10 +17,18 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
     private val _loginResult = MutableLiveData<Boolean>()
     val loginResult: LiveData<Boolean> = _loginResult
 
+    // Add this to track the currently logged-in user
+    private val _currentUser = MutableLiveData<UserInfo?>()
+    val currentUser: LiveData<UserInfo?> = _currentUser
+
     fun login(username: String, password: String) {
         viewModelScope.launch {
             val user = repository.login(username, password)
             _loginResult.postValue(user != null)
+            // Store the logged-in user
+            if (user != null) {
+                _currentUser.postValue(user)
+            }
         }
     }
 
