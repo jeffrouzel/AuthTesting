@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">AuthTesting</string>
+    <string name="pageLoginLabel">Login Page</string>
+    <string name="pageRegisterLabel">Register Page</string>
+    <string name="pageHomeLabel">WELCOME!</string>
+    <string name="promptUsername">Username\:</string>
+    <string name="promptPassword">Password\:</string>
+    <string name="promptConfirmPassword">Confirm Password\:</string>
+    <string name="labelLogin">Login</string>
+    <string name="labelRegister">Register</string>
+
+    <string name="label_guest">Guest</string>
+
+    <string name="afi_username">Please enter your username</string>
+    <string name="afi_password">Please enter your password</string>
+
+    <string name="ctaText_register">Don\'t have an account \?</string>
+    <string name="linkSignUp">Sign Up</string>
+    <string name="ctaText_login">Have an account\?</string>
+    <string name="linkSignIn">Sign In</string>
+
 </resources>

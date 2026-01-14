@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="inputs_type" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="labels_type" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="labels_type2" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/normal_text</item>
+    </style>
+
+    <style name="hyperlink_type" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/aqua</item>
+    </style>
+</resources>
