@@ -1,23 +1,22 @@
 <resources>
     <string name="app_name">AuthTesting</string>
-    <string name="pllogin">Login Page</string>
-    <string name="plregister">Register Page</string>
-    <string name="plhome">WELCOME!</string>
-    <string name="labelusername">Username\:</string>
-    <string name="labelpassword">Password\:</string>
-    <string name="labelconfirmpassword">Confirm Password\:</string>
-    <string name="labellogin">Login</string>
-    <string name="labelregister">Register</string>
+    <string name="pageLoginLabel">Login Page</string>
+    <string name="pageRegisterLabel">Register Page</string>
+    <string name="pageHomeLabel">WELCOME!</string>
+    <string name="promptUsername">Username\:</string>
+    <string name="promptPassword">Password\:</string>
+    <string name="promptConfirmPassword">Confirm Password\:</string>
+    <string name="labelLogin">Login</string>
+    <string name="labelRegister">Register</string>
 
     <string name="label_guest">Guest</string>
 
     <string name="afi_username">Please enter your username</string>
     <string name="afi_password">Please enter your password</string>
 
-    <string name="rgstrPart1">Don\'t have an account \?</string>
-    <string name="rgstrPart2">Sign Up</string>
-    <string name="lgnPart1">Have an account\?</string>
-    <string name="lgnPart2">Sign In</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ctaText_register">Don\'t have an account \?</string>
+    <string name="linkSignUp">Sign Up</string>
+    <string name="ctaText_login">Have an account\?</string>
+    <string name="linkSignIn">Sign In</string>
+
 </resources>

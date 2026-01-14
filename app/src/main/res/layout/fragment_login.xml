@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_space3"
-            android:text="@string/pllogin"
+            android:text="@string/pageLoginLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/normal_space"
-            android:text="@string/labelusername"
+            android:text="@string/promptUsername"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/pagelabelLogin" />
 
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/small_space"
-            android:text="@string/labelpassword"
+            android:text="@string/promptPassword"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/inputUsername" />
 
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/normal_space"
-            android:text="@string/labellogin"
+            android:text="@string/labelLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/inputPassword" />
@@ -88,10 +88,10 @@
             app:layout_constraintTop_toBottomOf="@id/buttonLogin">
 
             <TextView
-                android:id="@+id/redirect_register1"
+                android:id="@+id/callToAction_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rgstrPart1" />
+                android:text="@string/ctaText_register" />
 
             <TextView
                 android:id="@+id/redirect_register2"
@@ -101,7 +101,7 @@
                 android:layout_marginStart="@dimen/small_space"
                 android:clickable="true"
                 android:focusable="true"
-                android:text="@string/rgstrPart2" />
+                android:text="@string/linkSignUp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

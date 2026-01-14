@@ -1,127 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/pagelabelRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/plregister"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/big_space3"
-        style="@style/labels_type"
-        />
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.authtesting.UserViewModel" />
+    </data>
 
-    <TextView
-        android:id="@+id/labelUsername"
-        style="@style/labels_type2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/big_space"
-        android:layout_marginTop="@dimen/normal_space"
-        android:layout_marginEnd="@dimen/big_space3"
-        android:text="@string/labelusername"
-        app:layout_constraintEnd_toEndOf="@+id/pagelabelRegister"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pagelabelRegister" />
-
-    <EditText
-        android:id="@+id/inputUsername_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/afi_username"
-        android:layout_marginTop="@dimen/tiny_space"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/labelUsername"
-        style="@style/inputs_type"/>
-
-    <TextView
-        android:id="@+id/labelPassword"
-        style="@style/labels_type2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/small_space"
-        android:layout_marginEnd="@dimen/big_space3"
-        android:text="@string/labelpassword"
-
-        app:layout_constraintStart_toStartOf="@+id/labelUsername"
-        app:layout_constraintTop_toBottomOf="@id/inputUsername_register" />
-
-    <EditText
-        android:id="@+id/inputPassword_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/afi_password"
-        android:layout_marginTop="@dimen/tiny_space"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/labelPassword"
-        style="@style/inputs_type"/>
-
-    <TextView
-        android:id="@+id/labelConfirmPassword"
-        style="@style/labels_type2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/small_space"
-        android:text="@string/labelconfirmpassword"
-        app:layout_constraintStart_toStartOf="@+id/labelPassword"
-        app:layout_constraintTop_toBottomOf="@id/inputPassword_register" />
-
-    <EditText
-        android:id="@+id/inputConfirmPass_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/afi_password"
-        android:layout_marginTop="@dimen/tiny_space"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/labelConfirmPassword"
-        style="@style/inputs_type"
-        />
-
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/labelregister"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputConfirmPass_register"
-        android:layout_marginTop="@dimen/normal_space"/>
-
-
-    <TextView
-        android:id="@+id/redirect_register1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lgnPart1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonRegister"
-        android:layout_marginTop="@dimen/small_space"
-        android:layout_marginEnd="@dimen/big_space2"/>
-
-    <TextView
-        android:id="@+id/redirect_register2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lgnPart2"
-        app:layout_constraintStart_toEndOf="@id/redirect_register1"
-        app:layout_constraintTop_toTopOf="@+id/redirect_register1"
-        android:layout_marginStart="@dimen/small_space"
-        style="@style/hyperlink_type"
-        android:clickable="true"/>
-
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
+        <TextView
+            android:id="@+id/pagelabelRegister"
+            style="@style/labels_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_space3"
+            android:text="@string/pageRegisterLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/labelUsername"
+            style="@style/labels_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_space"
+            android:text="@string/promptUsername"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pagelabelRegister" />
+
+        <EditText
+            android:id="@+id/inputUsername_register"
+            style="@style/inputs_type"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tiny_space"
+            android:hint="@string/afi_username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelUsername" />
+
+        <TextView
+            android:id="@+id/labelPassword"
+            style="@style/labels_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            android:text="@string/promptPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputUsername_register" />
+
+        <EditText
+            android:id="@+id/inputPassword_register"
+            style="@style/inputs_type"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tiny_space"
+            android:hint="@string/afi_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelPassword" />
+
+        <TextView
+            android:id="@+id/labelConfirmPassword"
+            style="@style/labels_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            android:text="@string/promptConfirmPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputPassword_register" />
+
+        <EditText
+            android:id="@+id/inputConfirmPassword_register"
+            style="@style/inputs_type"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tiny_space"
+            android:hint="@string/afi_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelConfirmPassword" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_space"
+            android:text="@string/labelRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputConfirmPassword_register" />
+
+        <LinearLayout
+            android:id="@+id/registerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonRegister">
+
+            <TextView
+                android:id="@+id/callToAction_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ctaText_login" />
+
+            <TextView
+                android:id="@+id/redirect_login"
+                style="@style/hyperlink_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_space"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/linkSignIn" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

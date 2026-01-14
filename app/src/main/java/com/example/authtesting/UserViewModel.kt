@@ -32,6 +32,27 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun register(username: String, password: String) {
+        viewModelScope.launch {
+            // Check if user already exists
+            val existingUser = repository.getUserByUsername(username)
+            if (existingUser != null) {
+                _registerResult.postValue(RegisterResult.USER_EXISTS)
+            } else {
+                repository.insertUser(UserInfo(name = username, password = password))
+                _registerResult.postValue(RegisterResult.SUCCESS)
+            }
+        }
+    }
+
+    private val _registerResult = MutableLiveData<RegisterResult>()
+    val registerResult: LiveData<RegisterResult> = _registerResult
+
+    enum class RegisterResult {
+        SUCCESS,
+        USER_EXISTS
+    }
+
     fun insertDefaultUser() {
         viewModelScope.launch {
             repository.insertUser(
